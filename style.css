@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+*{
+    padding: 0;
+     margin: 0;
+     font-family: 'Barlow', sans-serif;
+     overflow: hidden;
+}
+body{
+    width: 1536px;
+max-height: 100vh;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center center;
+background-attachment: fixed;
+}
+.pagina{
+display: flex;
+vertical-align: baseline;
+width: 100%;
+height: 100%;
+}
+.modelo{ 
+display: flex;
+vertical-align: baseline;
+padding-top: 100px;
+padding-left: 390px;
+width: 820px;
+}
+
+.frente{
+    margin-right: 2%;
+}
+.costas{
+    margin-left: 2%;
+}
+.frente1{
+    position: absolute;
+}
+.frente2{
+    position: absolute;
+}
+.frente3,.frente4{
+    position: absolute;
+    z-index: 10;
+}
+.drag{
+  position: absolute;
+  z-index: 12;
+  width: 820px;
+  height: 500px;
+}
+.uploader{
+  position: absolute;
+    width: 150px;
+    height: 35px;
+    margin-top: 580px;
+    margin-left: 1300px;
+    z-index: 1;
+    text-align:center;
+    border-top: 1px solid #19275c;
+background: #630000;
+background: -webkit-gradient(linear, left top, left bottom, from(#8b0000), to(#630000));
+background: -webkit-linear-gradient(top, #8b0000, #630000);
+background: -moz-linear-gradient(top, #8b0000, #630000);
+background: -ms-linear-gradient(top, #8b0000, #630000);
+background: -o-linear-gradient(top, #8b0000, #630000);
+border-radius:10px ;
+border-width: 2px ;
+border-style: solid;
+border-color: #19285C;
+-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+box-shadow: rgba(0,0,0,1) 0 1px 0;
+text-shadow: rgba(0,0,0,.4) 0 1px 0;
+color: white;
+font-size: 20px;
+font-family: Helvetica, Arial, Sans-Serif;
+text-decoration: none;
+vertical-align:middle;
+padding-top: 10px;
+}
+
+.bolsofrente, .bolso23, .bolso{
+    position: absolute;
+    visibility: hidden;
+    z-index: 9;
+}
+.costas1{
+    position: absolute;
+    padding-left: 30px;
+}
+.costas2{
+    position: absolute;
+    padding-left: 30px;
+}
+.costas3{
+    position: absolute;
+    padding-left: 30px;
+    z-index: 10;
+}
+.acabamentos{
+    position: absolute;
+    background-color: #EFEFEF;
+    width: 300px;
+    height: 500px;
+    border-radius:10px ;
+    border-width: 2px ;
+    border-style: solid;
+    border-color: #ff3535;
+    margin-top: 60px;
+    margin-left: 20px;
+    z-index: 1;
+}
+.acabamentos h2{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.delete{
+    display: none;}
+.download{
+    position: absolute;
+    background-color: #8B0000;
+    width: 200px;
+    height: 50px;
+    border-radius:10px ;
+    border-width: 2px ;
+    border-style: solid;
+    border-color: #19285C;
+    color: #fff;
+    margin-top: 580px;
+    z-index: 1;
+}
+
+.download {
+border-top: 1px solid #19275c;
+background: #630000;
+background: -webkit-gradient(linear, left top, left bottom, from(#8b0000), to(#630000));
+background: -webkit-linear-gradient(top, #8b0000, #630000);
+background: -moz-linear-gradient(top, #8b0000, #630000);
+background: -ms-linear-gradient(top, #8b0000, #630000);
+background: -o-linear-gradient(top, #8b0000, #630000);
+padding: 11px 22px;
+border-radius:10px ;
+border-width: 2px ;
+border-style: solid;
+border-color: #19285C;
+-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+box-shadow: rgba(0,0,0,1) 0 1px 0;
+text-shadow: rgba(0,0,0,.4) 0 1px 0;
+color: white;
+font-size: 20px;
+font-family: Helvetica, Arial, Sans-Serif;
+text-decoration: none;
+vertical-align: middle;
+margin-left: 70px;
+z-index: 1;
+}
+.download:hover , .uploader:hover {
+background: #8b0000;
+color: #ccc;
+cursor: pointer;
+}
+.download:active, .uploader:active {
+background: #1b435e;
+}
+
+.divisao{
+    border-bottom: solid 1px;
+    border-color:#919191 ;
+    height: 5px;
+}
+.opcoes{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.optcontainer{
+    display: flex;
+vertical-align: baseline;
+}
+.opcoes input[type=radio], .optcolors input[type=radio] {
+display: none;
+}
+.opcoes input[type=radio] + label span{
+display: inline-block;
+width: 30px;
+height: 30px;
+margin: -1px 5px 10px 0;
+vertical-align: middle;
+cursor: pointer;
+border-radius: 50%;
+border: 2px solid #ffffff;
+box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+background-repeat: no-repeat;
+background-position: center;
+text-align: center;
+line-height: 32px;
+}
+.optcolors input[type=radio] + label span {
+display: inline-block;
+width: 30px;
+height: 30px;
+margin: -1px 5px 10px 0;
+vertical-align: middle;
+cursor: pointer;
+border-radius: 50%;
+border: 2px solid #ffffff;
+box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+background-repeat: no-repeat;
+background-position: center;
+text-align: center;
+line-height: 32px;
+}
+.opcoes input[type=radio] + label span img, .optcolors input[type=radio] + label span img{
+opacity: 0;
+transition: all 0.3s ease;
+}
+.opcoes input[type=radio]#base + label span{
+background-color: #fff;
+}
+.opcoes input[type=radio]#botoes + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#gola1 + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#gola2 + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#bolso + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#bolso1 + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#punho + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#vista + label span {
+background-color: #fff;
+}
+.opcoes input[type=radio]#vista1 + label span {
+background-color: #fff;
+}
+
+.opcoes input[type=radio]:checked + label span img, .optcolors input[type=radio]:checked + label span img {
+opacity: 1;
+}
+.optcolors input[type=radio]#whitebase3 + label span,.optcolors input[type=radio]#whitebase4 + label span,.optcolors input[type=radio]#whitebase5 + label span,.optcolors input[type=radio]#whitebase6 + label span,.optcolors input[type=radio]#whitebase7 + label span,.optcolors input[type=radio]#whitebase8 + label span ,  .optcolors input[type=radio]#blackbase4 + label span,  .optcolors input[type=radio]#bluebase4 + label span,.optcolors input[type=radio]#redbase4 + label span, .optcolors input[type=radio]#blackbase5 + label span, .optcolors input[type=radio]#bluebase5 + label span,.optcolors input[type=radio]#redbase5 + label span, .optcolors input[type=radio]#yellowbase5 + label span{
+background-color: #fff;
+}
+.optcolors input[type=radio]#whitebase + label span,.optcolors input[type=radio]#whitebase1 + label span,.optcolors input[type=radio]#whitebase2 + label span{
+    background-color: #ea4c24;
+}
+.optcolors input[type=radio]#blackbase + label span, .optcolors input[type=radio]#blackbase1 + label span, .optcolors input[type=radio]#blackbase2 + label span, .optcolors input[type=radio]#blackbase6 + label span, .optcolors input[type=radio]#blackbase7 + label span, .optcolors input[type=radio]#blackbase8 + label span {
+background-color: #eb5523;
+}
+.optcolors input[type=radio]#bluebase + label span, .optcolors input[type=radio]#bluebase1 + label span, .optcolors input[type=radio]#bluebase2 + label span, .optcolors input[type=radio]#bluebase6 + label span, .optcolors input[type=radio]#bluebase7 + label span, .optcolors input[type=radio]#bluebase8 + label span {
+background-color: #9e1b1e;
+}
+.optcolors input[type=radio]#redbase + label span,.optcolors input[type=radio]#redbase1 + label span,.optcolors input[type=radio]#redbase2 + label span,.optcolors input[type=radio]#redbase6 + label span,.optcolors input[type=radio]#redbase7 + label span,.optcolors input[type=radio]#redbase8 + label span {
+background-color: #7e8caf;
+}
+.optcolors input[type=radio]#yellowbase + label span, .optcolors input[type=radio]#yellowbase1 + label span, .optcolors input[type=radio]#yellowbase2 + label span, .optcolors input[type=radio]#yellowbase4 + label span, .optcolors input[type=radio]#yellowbase6 + label span, .optcolors input[type=radio]#yellowbase7 + label span, .optcolors input[type=radio]#yellowbase8 + label span {
+background-color: #181a4f;
+}
+.optcolors input[type=radio]#greenbase + label span,.optcolors input[type=radio]#greenbase1 + label span,.optcolors input[type=radio]#greenbase2 + label span,.optcolors input[type=radio]#greenbase3 + label span,.optcolors input[type=radio]#greenbase4 + label span,.optcolors input[type=radio]#greenbase5 + label span,.optcolors input[type=radio]#greenbase6 + label span,.optcolors input[type=radio]#greenbase7 + label span,.optcolors input[type=radio]#greenbase8 + label span {
+background-color: #0b102e;
+}
+
+.optcolors input[type=radio]#basebase1 + label span, .optcolors input[type=radio]#carcelacarcela1 + label span, .optcolors input[type=radio]#golagola1 + label span{
+    background-color: #0e472c;
+}
+.optcolors input[type=radio]#basebase2 + label span, .optcolors input[type=radio]#carcelacarcela2 + label span, .optcolors input[type=radio]#golagola2 + label span{
+    background-color: #93734f;
+}
+.optcolors input[type=radio]#basebase3 + label span, .optcolors input[type=radio]#carcelacarcela3 + label span, .optcolors input[type=radio]#golagola3 + label span{
+    background-color: #6d6b56;
+}
+.optcolors input[type=radio]#basebase4 + label span, .optcolors input[type=radio]#carcelacarcela4 + label span, .optcolors input[type=radio]#golagola4 + label span{
+    background-color: #7f797c;
+}
+.optcolors input[type=radio]#basebase5 + label span, .optcolors input[type=radio]#carcelacarcela5 + label span, .optcolors input[type=radio]#golagola5 + label span{
+    background-color: #64594f;
+}
+
+
+
+.optcolors input[type=radio]#blackbase3 + label span{
+    background-color: #DD0707;
+}
+.optcolors input[type=radio]#bluebase3 + label span{
+    background-color: #C0FF00;
+}
+.optcolors input[type=radio]#redbase3 + label span,.optcolors input[type=radio]#yellowbase3 + label span{
+    background-color: #E7E8E9;
+}
+.switch, .switch2 {
+visibility: hidden;
+position: absolute;
+margin-left: -9999px;
+}
+
+.switch + label, .switch2 + label {
+display: block;
+position: relative;
+cursor: pointer;
+outline: none;
+user-select: none;
+}
+
+.switch--shadow + label, .switch--shadow2 + label{
+padding: 2px;
+width: 50px;
+height: 25px;
+background-color: #dddddd;
+border-radius: 25px;
+}
+.switch--shadow + label:before,
+.switch--shadow + label:after ,.switch--shadow2 + label:before,
+.switch--shadow2 + label:after {
+display: block;
+position: absolute;
+top: 1px;
+left: 1px;
+bottom: 1px;
+content: "";
+}
+.switch--shadow + label:before, .switch--shadow2 + label:before {
+right: 1px;
+background-color: #f1f1f1;
+border-radius: 25px;
+transition: background 0.4s;
+}
+.switch--shadow + label:after,.switch--shadow2 + label:after {
+width: 25px;
+background-color: #fff;
+border-radius: 100%;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+transition: all 0.4s;
+}
+.switch--shadow:checked + label:before {
+background-color: #8ce196;
+}
+.switch--shadow:checked + label:after,
+    .switch--shadow2:checked + label:after  {
+transform: translateX(25px);
+}
+
+.switch__container2{
+    display: none;
+}
+
+.cores,.coresb,.coresGE, .coresGI,.coresP, .coresVE, .coresVD,.coresBF,.coresBB{
+position: absolute;
+display: flex;
+    background-color: #EFEFEF;
+    width: 300px;
+    height: 360px;
+    border-radius:10px ;
+    border-width: 2px ;
+    border-style: solid;
+    border-color: #ff3535;
+    margin-top: 150px;
+   left:1220px;
+   z-index: 20;
+}
+.cores h2,.coresb h2, .coresGE h2, .coresGI h2, .coresP h2, .coresVE h2, .coresVD h2, .coresBF h2,.coresBB h2{
+    width: 100%;
+    position: absolute;
+    display:flex;
+    justify-content:center ;
+    text-align: center;
+    margin-top: 1%;
+}
+.divisao1{
+width: 99.4%;
+left: 0.2%;
+position: absolute;
+padding-top: 30px;
+border-bottom:1px solid #919191;
+height: 3px;
+}
+.optcolors{
+    margin-top: 12%;
+    width: 100%;
+    margin-left: 15px; 
+    margin-right: 15px;
+      overflow-y: auto;
+  }
+
+  .optcolors form{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px; 
+ 
+  }
+  .optcolors.bolso1{
+    margin-top: 12%;
+    width: 100%;
+    margin-left: 15px;
+  }
+.optcolors.bolso1 form{
+    display: grid;
+    grid-template-columns:repeat(1,1fr) ;
+    grid-gap: 10px;
+}
+#escolhergola,#escolherpunho,#trocafaixas{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  .botaoacabamentos, .botaoacabamento, .botaoacabamento label, .botaoacabamento label svg{
+    visibility: hidden;
+  }
+
+  .deletebase {
+    display: none;
+}
+.modelo {
+    display: flex;
+    vertical-align: baseline;
+}
+
+.costas {
+    margin-left: 20px;
+}
+.base {
+    fill: #5b6114;
+}
+
+.faixabranca {
+    fill: #E7E8E9;
+}
+
+.faixacolorida {
+    fill: #dd0707;
+}
+.gola{
+    fill:#00FE08;
+}
+.botao{
+    fill:#ffffff;
+}
+.carcela{
+    fill:#901414;
+}
+.base.ab,.basecostas,.mangalonga,.mangacurta,.bordacarcela,.gola{
+stroke: #000;
+stroke-opacity: 1;
+stroke-width: 2;
+}
+.punhocanhaocarcela,.punhoelastico,.punhoregulagem,.punhocanhao,.faixabranca,.faixacolorida{
+stroke-opacity: 0;
+}
+.acabamentos{
+    width: 220px;
+}
+.modelo{
+    padding-left: 260px;
+}
+.cores, .coresb, .coresGE, .coresGI, .coresP, .coresVE, .coresVD, .coresBF, .coresBB {
+    left: 1080px;
+}
+.uploader{
+    margin-top: 530px;
+    margin-left: 1160px;
+}
+.download{
+    margin-top: 570px;
+    margin-left: 30px;
+}
+.botaotm{
+    border: 2px solid #1a1a1a;
+    border-radius: 30px;
+    width: 215px;
+    margin-top: 10px;
+}
+.btn {
+display: inline-block;
+padding: 8px;
+position: relative;
+text-align: center;
+transition: background 600ms ease, color 600ms ease;
+}
+
+input[type=radio].toggle {
+display: none;
+}
+input[type=radio].toggle + label {
+cursor: pointer;
+min-width: 60px;
+}
+input[type=radio].toggle + label:hover {
+background: none;
+color: #1a1a1a;
+}
+input[type=radio].toggle + label:after {
+background: #7e1313;
+content: "";
+height: 100%;
+position: absolute;
+top: 1px;
+transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+width: 100%;
+z-index: -1;
+border-radius: 30px;
+}
+input[type=radio].toggle.toggle-left + label {
+border-right: 0;
+}
+input[type=radio].toggle.toggle-left + label:after {
+left: 100%;
+}
+input[type=radio].toggle.toggle-right + label {
+margin-left: -5px;
+}
+input[type=radio].toggle.toggle-right + label:after {
+left: -100%;
+}
+input[type=radio].toggle:checked + label {
+cursor: default;
+color: #fff;
+transition: color 200ms;
+}
+input[type=radio].toggle:checked + label:after {
+left: 0;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #ff000d #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff000d;
+    border-radius: 10px;
+    border: 3px double #000000;
+  }
+/*-------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------Responsividade-------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 425px) {
+    *{
+        overflow:hidden;
+    }
+    body{
+        width: 425px;
+    }
+
+    .social_masculino{ 
+        position: absolute;
+        padding-left:140px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        width: 380px;        
+        height: 510px;
+    }
+    .frente{
+        margin:0;
+        position: absolute;
+        visibility: visible;
+    }
+    .costas{
+        margin:0;
+        position: absolute;
+        display:none;
+    }
+    .modelo{
+        padding-left: 130px;
+    }
+    .costas1,.costas2,.costas3{
+        position: absolute;
+        left:-30px;
+        width: 360px;
+    }
+    .frente1,.frente2,.frente3,.frente4,.costas1,.costas2,.costas3,.imgbolso, .imgfrente, .imgcostas, .bolso{
+        position: absolute;
+        width: 360px;
+        height: 500px;
+    }
+
+   
+    .switch__container2{
+        display: flex;
+        position: absolute;
+        left:245px;
+        margin-top:650px;
+        vertical-align: baseline;
+        z-index: 13;
+    }
+    .drag{
+        position: absolute;
+        width: 400px !important;
+        height: 400px !important;
+    }
+    .canvas-container,canvas, #list{
+        position: absolute;
+        width:400px !important;
+        height: 400px !important;
+    }
+    .download{
+        margin-top:700px;
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+        padding: 2px;
+        left:-20px
+    }
+    .uploader{
+        margin-top: 700px;
+        width: 116px;
+        height: 24px;
+        font-size: 16px;
+        padding-top: 7px;
+        margin-left: 540px;
+    }
+    .cores,.coresb,.coresGE, .coresGI,.coresP, .coresVE, .coresVD,.coresBF,.coresBB{
+            visibility: hidden;
+            top:-110px;
+            width: 300px;
+            height: 450px;
+            left:320px;
+            z-index: 22;
+    }
+
+    .optcolors{
+        margin-top: 18%;
+        width: 100%;
+        margin-left: 20px; 
+      }
+    .optcolors form{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+    .acabamentos, .deletelabel, .deletelabel1, .deletelabel2, .deletelabel3,.deletelabel4 {
+        display: none;
+    }
+    .deletebase{
+        display: block;
+    }
+    .botaoacabamentos{
+        visibility: visible;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #E9EAEC;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        top: 35px;
+        left: 0;
+    }
+    .botaoacabamento + label svg{
+        visibility: visible;
+        position: absolute;
+        top:15%;
+        left: 10%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .acabamentos{
+    top:-50px;
+    z-index: 20;
+    left: -10px;
+    }
+    .delete{
+        display: block;
+        position: absolute;
+        right: 0;
+        top:0;
+        width: 20px;
+        height: 20px;
+    }
+    .deletebase{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 20px;
+        height: 20px;
+    }
+
+   /*------------------------------------------------------------------------------------------------------*/
+    .botaocores{
+        visibility: visible;
+        position: absolute;
+        top: 35px;
+        left:610px;
+        width: 60px;
+        height: 60px;
+        background-color:#E9EAEC;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        align-items: center;
+        z-index: 21;
+    }
+    .botaocor + label{
+        visibility: visible;
+        padding: 4px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .botaocoresbotoes,.botaocoresgola,.botaocorescarcela,.botaocoresvista{
+        visibility: hidden;
+        position: absolute;
+        top: 35px;
+        left:610px;
+        width: 60px;
+        height: 60px;
+        background-color:#E9EAEC;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        align-items: center;
+        z-index: 21;
+    }
+    .botaocorbotoes + label,.botaocorgola + label,.botaocorcarcela + label,.botaocorvista + label{
+        visibility: hidden;
+        padding: 4px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    
+}
