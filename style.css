@@ -564,7 +564,7 @@ left: 0;
         width: 425px;
     }
 
-    .social_masculino{ 
+    .modelo{ 
         position: absolute;
         padding-left:140px;
         padding-right: 30px;
@@ -582,9 +582,7 @@ left: 0;
         position: absolute;
         display:none;
     }
-    .modelo{
-        padding-left: 130px;
-    }
+ 
     .costas1,.costas2,.costas3{
         position: absolute;
         left:-30px;
@@ -616,7 +614,7 @@ left: 0;
         height: 400px !important;
     }
     .download{
-        margin-top:700px;
+        margin-top: 550px;
         width: 120px;
         height: 35px;
         font-size: 15px;
@@ -624,12 +622,12 @@ left: 0;
         left:-20px
     }
     .uploader{
-        margin-top: 700px;
+        margin-top: 550px;
         width: 116px;
         height: 24px;
         font-size: 16px;
         padding-top: 7px;
-        margin-left: 540px;
+        right: 10px;
     }
     .cores,.coresb,.coresGE, .coresGI,.coresP, .coresVE, .coresVD,.coresBF,.coresBB{
             visibility: hidden;
@@ -702,7 +700,7 @@ left: 0;
         visibility: visible;
         position: absolute;
         top: 35px;
-        left:610px;
+        right: 0;
         width: 60px;
         height: 60px;
         background-color:#E9EAEC;
@@ -725,7 +723,7 @@ left: 0;
         visibility: hidden;
         position: absolute;
         top: 35px;
-        left:610px;
+        right: 0;
         width: 60px;
         height: 60px;
         background-color:#E9EAEC;
@@ -743,6 +741,15 @@ left: 0;
         width: 40px;
         height: 40px;
     }
-
-    
+    .modelo{
+        padding-left: 10px;
+    }
+    .cores, .coresb, .coresGE, .coresGI, .coresP, .coresVE, .coresVD, .coresBF, .coresBB {
+        width: 220px;
+        left: 190px;
+    }
+    .switch__container2 {
+        left: 145px;
+        margin-top: 510px;
+    }
 }
