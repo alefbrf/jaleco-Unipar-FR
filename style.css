@@ -742,14 +742,17 @@ left: 0;
         height: 40px;
     }
     .modelo{
-        padding-left: 10px;
+        padding-left: 5px;
     }
     .cores, .coresb, .coresGE, .coresGI, .coresP, .coresVE, .coresVD, .coresBF, .coresBB {
         width: 220px;
-        left: 190px;
+        left: 90px;
     }
     .switch__container2 {
-        left: 145px;
+        left: 90px;
         margin-top: 510px;
+    }
+    svg#Camada_1{
+        width: 310px !important;
     }
 }
